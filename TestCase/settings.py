@@ -77,26 +77,27 @@ WSGI_APPLICATION = 'TestCase.wsgi.application'
 
 
 # #need to create the database in the MysqlWorkbench first
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'TestCaseDB',
-        'USER':'root',
-        'PASSWORD': 'tita',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-
-
-
-
+# IMPORTANT... when i use this DB... my model Unittests fails ... why???
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'TestCaseDB',
+#         'USER':'root',
+#         'PASSWORD': 'tita',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
 #     }
 # }
+
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.TestCaseDB'),
+    }
+}
 
 
 # Password validation
