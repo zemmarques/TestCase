@@ -1,0 +1,43 @@
+{% extends "forumApp/header.html" %}
+
+{% block sidebar %}
+	<ul>
+		<li><a href="/forum/"> Cancelar </a></li>
+	</ul>
+{% endblock %}
+
+{% block content %}
+		<h2>Login</h2>
+		{% if form.errors %}
+			<p class="error"> Password ou Username inválidos!</p>
+		{% endif %}
+
+		<form action="/forum/autenticacao/" method="post">{% csrf_token %}
+			<table>
+				<tr>
+					<td>
+						<label for="username"> Username:</label>
+					</td>
+					<td>
+						<input type="text" name="username" value="" id="username">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="password"> Password:</label>
+					</td>
+					<td>
+						<input type="password" name="password" value="" id="password">
+					</td>
+				</tr>
+
+			</table>
+			<br/>
+			<br/>
+			<input type="submit" value="login"/>
+		</form> 
+		<br/>
+		<br/>
+
+
+	{% endblock %}

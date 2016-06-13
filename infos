@@ -1,0 +1,21 @@
+
+## access to admin area ##
+--------------------------
+user: admin
+email: admin@admin.com
+pass: testcase
+
+
+## exemplo de user ##
+---------------------
+user: ze
+email: zemaile@gmail.com
+pass: josemarques
+
+
+
+## exemplo2 de user ##
+---------------------
+user: dias
+email: 
+pass: diasmarques

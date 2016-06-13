@@ -1,0 +1,51 @@
+{% extends "forumApp/header.html" %}
+
+{% block sidebar %}
+	<ul>
+		<p><strong> Olá {{username}} </strong></p>
+		<li><a href="/admin"> Administração </a></li>
+		<li><a href="/forum/novotopico"> Novo Tópico </a></li>
+		<br/>
+		<li><a href="/forum/logout"> Logout </a></li>
+	</ul>
+{% endblock %}
+
+
+
+{% block content %}
+
+<h1><center> Space Forum Homepage </center></h1>
+<br/>
+<h2> <center> Tópicos Recentes </center> </h2>
+
+	{% if topicos.count > 0 %}
+		{% for t in topicos reversed %}
+
+			<div class="container">
+				<ul>
+	  				<li><a href= "/forum/get/{{t.id}}"> {{t.title}} <span class="badge">{{t.replyTopic}}</span></a><br></li>
+	  				<p><i> por {{t.idUser}}, em {{t.pubDate}}</i></p>
+					<p> {{t.bodyText|upper|truncatewords:"10"}}</p>
+					<br/>
+				</ul>
+			</div>
+
+
+
+
+<!--
+			<div>
+				<ul>
+					<li><h3> <a href = "/forum/get/{{t.id}}"> {{t.titulo}}</a></h3></li>
+					<p><i> por <b>{{t.idUtilizador}}</b>, em {{t.pub_data}}</i></p>
+					<p> {{t.texto|upper|truncatewords:"10"}}</p>
+					<br/>
+				</ul>
+			</div>  -->
+
+
+		{% endfor %}
+	{% else %}
+		<p> Não existem tópicos a apresentar!</p>
+	{% endif %}
+{% endblock %}

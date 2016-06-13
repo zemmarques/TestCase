@@ -1,0 +1,69 @@
+{% extends "forumApp/header.html" %}
+{% load %}
+{% block sidebar %}
+	
+	<br/>	 
+	<button type="button" class="btn btn-primary" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt "> 
+		<a href="/forum/login"> <span class="glyphicon glyphicon-print"></span> Login </a> </li></button>
+	<button type="button" class="btn btn-success"> <a href="/forum/registo"><span class="glyphicons glyphicons-log-in"></span> Registo </a> </li></button>
+	<br/>
+	<br/>
+	<span class="glyphicons glyphicons-log-in"></span>
+
+	
+	
+{% endblock %}
+
+
+{% block content %}
+
+<h1><center> Space Forum Homepage </center></h1>
+<br/>
+
+<br/>
+
+<div class="container">
+  <h2>Tópicos Disponíveis</h2>
+  <div class="panel panel-default">
+    <div class="panel-body" width= "800px">
+    	{% if topicos.count > 0 %}
+
+			{% for t in topicos reversed %}
+
+				<div class="container">
+					<ul>
+					  	<li><a href= "/forum/get/{{t.id}}"> {{t.title}} <span class="badge">{{t.replyTopic}}</span></a><br></li>
+					  	<p><i> por {{t.idUser}}, em {{t.pubDate}}</i></p>
+						<p> {{t.bodyText|upper|truncatewords:"10"}}</p>
+						<br/>
+					</ul>
+				</div>
+
+			{% endfor %}
+		{% else %}
+			<p> Não existem tópicos a apresentar!</p>
+		{% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+<body>
+
+<div class="container">
+  <h2>Button Styles</h2>
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>      
+</div>
+
+</body>
+</html>

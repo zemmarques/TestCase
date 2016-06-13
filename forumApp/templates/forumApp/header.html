@@ -1,0 +1,71 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title> {% block title %} EspaçoForum {% endblock %}</title>
+		<style type="text/css">
+			body{
+				text-align:center;
+				background-image: url("/static/img/33.png");
+			}
+
+			#page {
+				width :1200px;
+				text-align: left;
+				margin: 10px auto 20px auto;
+				background-color: #cccccc;
+			}
+
+			#sidebar {
+				float: left;
+				width: 300px;
+				border: 5px solid #736D78;
+				background-color: #A2D9CE;
+				opacity: 0.7;
+			}
+
+			#content{
+				float:left;
+				width:800px;
+				border:5px solid #736D78;
+				padding:20px;
+				background-color:  #D0ECE7;
+				opacity: 0.7;
+    			/*filter: alpha(opacity=40);*/
+			}
+			hr.light {  
+			    margin:0 auto; 
+			    border:0px none white; 
+			    border-top:2px solid #A2D9CE; 
+			}
+
+			.panel-default {
+				background:#FFCCFF;
+				width:725px;
+			}
+
+		</style>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="page">
+			<div id="sidebar">
+				{% block sidebar %}
+				<ul>
+					<li><a href="/"> Homepage </a></li>
+					<li><a href="/admin"> Administração </a></li>
+				</ul>
+				{% endblock %}
+			</div>
+			<div id="content">
+				{% block content %} conteudo {% endblock %}
+			</div>
+		</div>
+	</body>
+</html>
