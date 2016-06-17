@@ -2,7 +2,7 @@ import unittest
 from django.test import TestCase
 from django.test.client import Client
 from django.http import HttpRequest
-from forumApp.views import homepage, login, registo,
+from forumApp.views import homepage, login, registo
 
 
 

@@ -117,11 +117,11 @@
 <p id="n48" class="pln"><a href="#n48">48</a></p>
 <p id="n49" class="pln"><a href="#n49">49</a></p>
 <p id="n50" class="pln"><a href="#n50">50</a></p>
-<p id="n51" class="stm run hide_run"><a href="#n51">51</a></p>
+<p id="n51" class="pln"><a href="#n51">51</a></p>
 <p id="n52" class="pln"><a href="#n52">52</a></p>
 <p id="n53" class="pln"><a href="#n53">53</a></p>
-<p id="n54" class="stm run hide_run"><a href="#n54">54</a></p>
-<p id="n55" class="stm run hide_run"><a href="#n55">55</a></p>
+<p id="n54" class="pln"><a href="#n54">54</a></p>
+<p id="n55" class="pln"><a href="#n55">55</a></p>
 <p id="n56" class="pln"><a href="#n56">56</a></p>
 <p id="n57" class="stm run hide_run"><a href="#n57">57</a></p>
 <p id="n58" class="pln"><a href="#n58">58</a></p>
@@ -133,11 +133,17 @@
 <p id="n64" class="pln"><a href="#n64">64</a></p>
 <p id="n65" class="pln"><a href="#n65">65</a></p>
 <p id="n66" class="stm run hide_run"><a href="#n66">66</a></p>
-<p id="n67" class="pln"><a href="#n67">67</a></p>
+<p id="n67" class="stm run hide_run"><a href="#n67">67</a></p>
 <p id="n68" class="pln"><a href="#n68">68</a></p>
-<p id="n69" class="pln"><a href="#n69">69</a></p>
-<p id="n70" class="stm run hide_run"><a href="#n70">70</a></p>
-<p id="n71" class="stm run hide_run"><a href="#n71">71</a></p>
+<p id="n69" class="stm run hide_run"><a href="#n69">69</a></p>
+<p id="n70" class="pln"><a href="#n70">70</a></p>
+<p id="n71" class="pln"><a href="#n71">71</a></p>
+<p id="n72" class="stm run hide_run"><a href="#n72">72</a></p>
+<p id="n73" class="pln"><a href="#n73">73</a></p>
+<p id="n74" class="pln"><a href="#n74">74</a></p>
+<p id="n75" class="pln"><a href="#n75">75</a></p>
+<p id="n76" class="stm run hide_run"><a href="#n76">76</a></p>
+<p id="n77" class="stm run hide_run"><a href="#n77">77</a></p>
 
             </td>
             <td class="text">
@@ -189,29 +195,35 @@
 <p id="t46" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t47" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertIn</span><span class="op">(</span><span class="str">b'&lt;h2>Login&lt;/h2>'</span><span class="op">,</span> <span class="nam">response</span><span class="op">.</span><span class="nam">content</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t48" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t49" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t50" class="pln">        <span class="com"># RegistoPage tests</span><span class="strut">&nbsp;</span></p>
-<p id="t51" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_registo_get_status_response</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t52" class="pln">                <span class="str">''' See if the response of the RegisterPage in the url:"/forum/registo/" is ok (status_code 200)'''</span><span class="strut">&nbsp;</span></p>
-<p id="t53" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t54" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">c</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'/forum/registo/'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t55" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">response</span><span class="op">.</span><span class="nam">status_code</span><span class="op">,</span> <span class="num">200</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t56" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t57" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_RegistoPage_title_text_is_correct</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t58" class="pln">                <span class="str">'''Confirm the Correct presentation of the Homepage'''</span><span class="strut">&nbsp;</span></p>
+<p id="t49" class="pln">        <span class="com"># def test_login_page_load(self):</span><span class="strut">&nbsp;</span></p>
+<p id="t50" class="pln">        <span class="com">#       ''' Ensure that the LoginPage loads correctly'''</span><span class="strut">&nbsp;</span></p>
+<p id="t51" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t52" class="pln">        <span class="com">#       response = self.c.post('/forum/login/', data = dict(username='test', password='test'), follow_redirects = True)</span><span class="strut">&nbsp;</span></p>
+<p id="t53" class="pln">        <span class="com">#       self.assertIn(b'&lt;h2> &lt;center> Topicos Recentes &lt;/center> &lt;/h2>', response.content)</span><span class="strut">&nbsp;</span></p>
+<p id="t54" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t55" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t56" class="pln">        <span class="com"># RegistoPage tests</span><span class="strut">&nbsp;</span></p>
+<p id="t57" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_registo_get_status_response</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t58" class="pln">                <span class="str">''' See if the response of the RegisterPage in the url:"/forum/registo/" is ok (status_code 200)'''</span><span class="strut">&nbsp;</span></p>
 <p id="t59" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t60" class="stm run hide_run">                <span class="nam">request</span> <span class="op">=</span> <span class="nam">HttpRequest</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t61" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">registo</span> <span class="op">(</span><span class="nam">request</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t60" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">c</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'/forum/registo/'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t61" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">response</span><span class="op">.</span><span class="nam">status_code</span><span class="op">,</span> <span class="num">200</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t62" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t63" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertIn</span><span class="op">(</span><span class="str">b'&lt;h2>Registo de Novo Utilizador&lt;/h2>'</span><span class="op">,</span> <span class="nam">response</span><span class="op">.</span><span class="nam">content</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t64" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t65" class="pln">        <span class="com"># LogoutPage tests</span><span class="strut">&nbsp;</span></p>
-<p id="t66" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_logout_get_status_response</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t67" class="pln">                <span class="str">'''See if the response of the LogoutPage in the url:"/forum/" is ok (status_code 200)'''</span><span class="strut">&nbsp;</span></p>
-<p id="t68" class="pln">                <span class="str">'''The page is redirect to the homepage   &lt;-- see it better '''</span><span class="strut">&nbsp;</span></p>
-<p id="t69" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t70" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">c</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'/forum/'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t71" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">response</span><span class="op">.</span><span class="nam">status_code</span><span class="op">,</span> <span class="num">200</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t63" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_RegistoPage_title_text_is_correct</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t64" class="pln">                <span class="str">'''Confirm the Correct presentation of the Homepage'''</span><span class="strut">&nbsp;</span></p>
+<p id="t65" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t66" class="stm run hide_run">                <span class="nam">request</span> <span class="op">=</span> <span class="nam">HttpRequest</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t67" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">registo</span> <span class="op">(</span><span class="nam">request</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t68" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t69" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertIn</span><span class="op">(</span><span class="str">b'&lt;h2>Registo de Novo Utilizador&lt;/h2>'</span><span class="op">,</span> <span class="nam">response</span><span class="op">.</span><span class="nam">content</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t70" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t71" class="pln">        <span class="com"># LogoutPage tests</span><span class="strut">&nbsp;</span></p>
+<p id="t72" class="stm run hide_run">        <span class="key">def</span> <span class="nam">test_logout_get_status_response</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t73" class="pln">                <span class="str">'''See if the response of the LogoutPage in the url:"/forum/" is ok (status_code 200)'''</span><span class="strut">&nbsp;</span></p>
+<p id="t74" class="pln">                <span class="str">'''The page is redirect to the homepage   &lt;-- see it better '''</span><span class="strut">&nbsp;</span></p>
+<p id="t75" class="pln"><span class="strut">&nbsp;</span></p>
+<p id="t76" class="stm run hide_run">                <span class="nam">response</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">c</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'/forum/'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t77" class="stm run hide_run">                <span class="nam">self</span><span class="op">.</span><span class="nam">assertEqual</span><span class="op">(</span><span class="nam">response</span><span class="op">.</span><span class="nam">status_code</span><span class="op">,</span> <span class="num">200</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 
             </td>
         </tr>
@@ -222,7 +234,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.1</a>,
-            created at 2016-06-17 16:09
+            created at 2016-06-17 17:47
         </p>
     </div>
 </div>
