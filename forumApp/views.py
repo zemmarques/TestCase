@@ -21,6 +21,8 @@ from forumApp.forms import TopicForm, ReplyForm
 def homepage (request):
 	'''chama a página inicial do forum '''
 
+	#print request
+
 	return render_to_response('forumApp/homepage.html',{'topicos':Topic.objects.all()})
 
 
@@ -47,6 +49,9 @@ def login(request):
 	c = {}
 	c.update(csrf(request))
 
+	#print c
+	#print request
+
 	return render_to_response('forumApp/login.html', c)
 	
 
@@ -64,6 +69,7 @@ def autenticacao(request):
 
 def inicio(request):
 	'''chama a página inicial com login feito'''
+
 	if request.user.is_authenticated():
 		return render_to_response('forumApp/homepage_login.html',{'topicos':Topic.objects.all(), 'username': request.user.username})
 	else:

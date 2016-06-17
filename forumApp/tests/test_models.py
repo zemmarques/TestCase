@@ -1,7 +1,7 @@
 import datetime
 from django.test import TestCase
-from forumApp.models import Topic
 
+from forumApp.models import Topic
 
 
 class TopicTestCase(TestCase):
@@ -36,3 +36,5 @@ class TopicTestCase(TestCase):
 			assert bText.bodyText == b
 		except UnboundLocalError:
 			print ("Assert failed!") 
+
+	# def ...proximo teste 
